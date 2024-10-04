@@ -6,11 +6,85 @@ body, html {
 }
 
 .background {
-    background-image: url('imagens/plano de fundo.jpg'); /* Altere para o nome do seu arquivo */
+    background-image: url('imagens/plano de fundo.jpg'); /* Imagem de fundo geral */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center center; /* Centraliza a imagem */
     height: 100%; /* Faz com que o div ocupe toda a altura da tela */
     display: flex; /* Permite que os itens internos sejam flexíveis */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
+}
+
+.section {
+    position: relative; /* Para posicionar os elementos dentro */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto dentro da seção */
+}
+
+.sports {
+    background-image: url('imagens/esportes.jpg'); /* Imagem de fundo do container */
+    background-size: cover; /* Faz a imagem cobrir toda a área do container */
+    background-position: center; /* Centraliza a imagem */
+    width: 300px; /* Largura do container de esportes */
+    height: 200px; /* Altura do container de esportes */
+    display: flex; /* Permite flexbox para centralização */
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    transition: transform 0.3s ease; /* Transição suave para a transformação */
+    overflow: hidden; /* Oculta partes que excedem o container */
+}
+
+.sports:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do container ao passar o mouse */
+}
+
+.sports-title {
+    margin: 0;
+    color: #004a07; /* Cor verde */
+    font-size: 48px; /* Tamanho da fonte */
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    z-index: 2; /* Fica acima da imagem de fundo */
+}
+
+.sports:hover .sports-title {
+    opacity: 0; /* Esconde o título ao passar o mouse */
+}
+
+.sports-buttons {
+    display: none; /* Esconde os botões por padrão */
+    margin-top: 10px; /* Espaçamento acima dos botões */
+    gap: 20px; /* Espaçamento vertical entre os botões */
+    flex-direction: column; /* Alinha os botões verticalmente */
+    align-items: center; /* Centraliza os botões horizontalmente */
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sports:hover .sports-buttons {
+    display: flex; /* Exibe os botões ao passar o mouse */
+}
+
+.sport-button {
+    background-color: #FFA500; /* Cor laranja */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 15px 0; /* Ajusta o espaçamento interno para vertical */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Aponta para o cursor quando em cima do botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor do fundo */
+    font-size: 1.7vw; /* Tamanho da fonte proporcional à largura da viewport */
+    width: 250px; /* Largura fixa dos botões */
+    height: 40px; /* Aumenta a altura do botão para um melhor ajuste */
+    display: flex; /* Habilita o flexbox */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: space-evenly
+}
+
+.sport-button:hover {
+    background-color: #4CAF50; /* Muda para verde ao passar o mouse */
 }
