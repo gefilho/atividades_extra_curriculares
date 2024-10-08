@@ -148,8 +148,8 @@ h2 {
 
 .animação:hover {
     animation: animCard 400ms;
-    height: 200px;
-    width: 300px;
+    height: 225px;
+    width: 450px;
 }
 
 .animação h2 {
@@ -162,8 +162,8 @@ h2 {
 
 .animação:not(:hover) {
     animation: notAnimCard 400ms;
-    height: 70px;
-    width: 200px;
+    height: 150px;
+    width: 350px;
 }
 
 .events {
