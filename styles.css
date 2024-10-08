@@ -1,5 +1,6 @@
 /* Resetando margens e preenchimentos padrão de body e html, e ajustando a altura para 100% da tela */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -7,117 +8,165 @@ body, html {
 
 /* Classe para o fundo geral da página */
 .background {
-    background-image: url('imagens/plano de fundo.jpg'); /* Define uma imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a área disponível */
-    background-position: center center; /* Centraliza a imagem no centro da tela */
-    height: 100%; /* Define altura para ocupar toda a tela */
-    display: flex; /* Define um layout flexível para centralização de elementos internos */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    background-image: url('imagens/plano de fundo.jpg');
+    /* Define uma imagem de fundo */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área disponível */
+    background-position: center center;
+    /* Centraliza a imagem no centro da tela */
+    height: 100%;
+    /* Define altura para ocupar toda a tela */
+    display: flex;
+    /* Define um layout flexível para centralização de elementos internos */
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo */
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo */
 }
 
 /* Seção transparente com conteúdo centralizado */
 .section {
-    position: relative; /* Necessário para posicionar elementos internos de forma absoluta */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
-    margin: 10px; /* Margem externa de 10px em todos os lados */
+    position: relative;
+    /* Necessário para posicionar elementos internos de forma absoluta */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo branco com opacidade */
+    margin: 10px;
+    /* Margem externa de 10px em todos os lados */
     padding: 20px;
-    border-radius: 10px; /* Bordas arredondadas */
-    text-align: center; /* Centraliza o texto dentro da seção */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    text-align: center;
+    /* Centraliza o texto dentro da seção */
     width: 200px;
     height: 70px;
 }
 
 /* Container para a área de esportes */
 .sports {
-    background-image: url('imagens/esportes.jpg'); /* Imagem de fundo específica para o container de esportes */
-    background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
-    background-position: center; /* Centraliza a imagem de fundo */
-    width: 300px; /* Define a largura do container */
-    height: 200px; /* Define a altura do container */
-    display: flex; /* Usa flexbox para organizar os elementos dentro */
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    overflow: hidden; /* Oculta qualquer conteúdo que exceda o container */
+    background-image: url('imagens/esportes.jpg');
+    /* Imagem de fundo específica para o container de esportes */
+    background-size: cover;
+    /* Faz a imagem de fundo cobrir toda a área */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    width: 300px;
+    /* Define a largura do container */
+    height: 200px;
+    /* Define a altura do container */
+    display: flex;
+    /* Usa flexbox para organizar os elementos dentro */
+    flex-direction: column;
+    /* Alinha os elementos verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens verticalmente */
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que exceda o container */
 }
 
 /* Estilo do título dentro da área de esportes */
 .sports-title {
-    margin: 0; /* Remove margens ao redor do título */
-    color: #038610; /* Define a cor verde para o título */
+    margin: 0;
+    /* Remove margens ao redor do título */
+    color: #038610;
+    /* Define a cor verde para o título */
 }
 
-h2{
+h2 {
     font-size: 35px;
 }
 
 /* Esconde o título ao passar o mouse */
 .sports:hover .sports-title {
-    opacity: 0; /* Faz o título desaparecer ao passar o mouse */
+    opacity: 0;
+    /* Faz o título desaparecer ao passar o mouse */
 }
 
 /* Container dos botões, inicialmente escondido */
 .sports-buttons {
-    display: none; /* Esconde os botões por padrão */
-    margin-top: 10px; /* Espaçamento acima dos botões */
-    gap: 20px; /* Define um espaçamento entre os botões */
-    flex-direction: column; /* Alinha os botões verticalmente */
-    align-items: center; /* Centraliza os botões horizontalmente */
-    justify-content: space-between; /* Distribui os botões uniformemente */
+    display: none;
+    /* Esconde os botões por padrão */
+    margin-top: 10px;
+    /* Espaçamento acima dos botões */
+    gap: 20px;
+    /* Define um espaçamento entre os botões */
+    flex-direction: column;
+    /* Alinha os botões verticalmente */
+    align-items: center;
+    /* Centraliza os botões horizontalmente */
+    justify-content: space-between;
+    /* Distribui os botões uniformemente */
     width: 100%;
-    height: 100%; /* Define a altura total do container */
+    height: 100%;
+    /* Define a altura total do container */
 }
 
 /* Exibe os botões ao passar o mouse sobre o container de esportes */
 .sports:hover .sports-buttons {
-    display: flex; /* Mostra os botões usando flexbox */
+    display: flex;
+    /* Mostra os botões usando flexbox */
 }
 
 /* Estilo dos botões dentro da seção de esportes */
 .sport-button {
-    background-color: #FFA500; /* Define a cor de fundo laranja */
-    color: white; /* Define a cor do texto como branco */
-    border: none; /* Remove a borda padrão */
-    padding: 15px 0; /* Adiciona espaçamento vertical dentro do botão */
-    border-radius: 50px; /* Bordas arredondadas no botão */
-    cursor: pointer; /* Aplica o cursor de "mãozinha" ao passar o mouse */
-    transition: background-color 0.3s ease; /* Aplica transição suave ao mudar a cor de fundo */
-    font-size: 1.7vw; /* Define o tamanho da fonte relativo à largura da tela (viewport) */
-    width: 250px; /* Largura fixa dos botões */
-    height: 40px; /* Define altura para ajustar o tamanho do botão */
-    display: flex; /* Ativa o flexbox dentro do botão */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    justify-content: space-evenly /* Distribui o conteúdo uniformemente no botão */
+    background-color: #FFA500;
+    /* Define a cor de fundo laranja */
+    color: white;
+    /* Define a cor do texto como branco */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 15px 0;
+    /* Adiciona espaçamento vertical dentro do botão */
+    border-radius: 50px;
+    /* Bordas arredondadas no botão */
+    cursor: pointer;
+    /* Aplica o cursor de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease;
+    /* Aplica transição suave ao mudar a cor de fundo */
+    font-size: 1.7vw;
+    /* Define o tamanho da fonte relativo à largura da tela (viewport) */
+    width: 250px;
+    /* Largura fixa dos botões */
+    height: 40px;
+    /* Define altura para ajustar o tamanho do botão */
+    display: flex;
+    /* Ativa o flexbox dentro do botão */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente */
+    align-items: center;
+    /* Centraliza o texto verticalmente */
+    justify-content: space-evenly
+        /* Distribui o conteúdo uniformemente no botão */
 }
 
 /* Muda a cor do botão ao passar o mouse */
 .sport-button:hover {
-    background-color: #4CAF50; /* Muda a cor de fundo para verde ao passar o mouse */
+    background-color: #4CAF50;
+    /* Muda a cor de fundo para verde ao passar o mouse */
 }
 
-.animação:hover{
+.animação:hover {
     animation: animCard 400ms;
     height: 200px;
     width: 300px;
 }
 
-.animação h2{
+.animação h2 {
     transition: opacity;
 }
 
-.animação:hover h2{
+.animação:hover h2 {
     display: none;
 }
 
-.animação:not(:hover){
+.animação:not(:hover) {
     animation: notAnimCard 400ms;
     height: 70px;
     width: 200px;
 }
 
-.events{
+.events {
     color: white;
     display: flex;
     flex-direction: column;
@@ -129,7 +178,7 @@ h2{
     background-repeat: no-repeat;
 }
 
-.containerLinks{
+.containerLinks {
     overflow: auto;
     width: 100%;
     height: 100%;
@@ -147,47 +196,61 @@ h2{
     visibility: visible;
 }
 
-.modal-btn{
+.modal-btn {
     text-decoration: none;
     text-align: center;
-    background-color: #FFA500; /* Define a cor de fundo laranja */
-    color: white; /* Define a cor do texto como branco */
-    border: none; /* Remove a borda padrão */
-    padding: 15px; /* Adiciona espaçamento vertical dentro do botão */
-    border-radius: 50px; /* Bordas arredondadas no botão */
-    cursor: pointer; /* Aplica o cursor de "mãozinha" ao passar o mouse */
-    transition: background-color 0.3s ease; /* Aplica transição suave ao mudar a cor de fundo */
-    font-size: 1.7vw; /* Define o tamanho da fonte relativo à largura da tela (viewport) */
-    width: 100%; /* Largura fixa dos botões */
-    display: flex; /* Ativa o flexbox dentro do botão */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    justify-content: space-evenly /* Distribui o conteúdo uniformemente no botão */
+    background-color: #FFA500;
+    /* Define a cor de fundo laranja */
+    color: white;
+    /* Define a cor do texto como branco */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 15px;
+    /* Adiciona espaçamento vertical dentro do botão */
+    border-radius: 50px;
+    /* Bordas arredondadas no botão */
+    cursor: pointer;
+    /* Aplica o cursor de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease;
+    /* Aplica transição suave ao mudar a cor de fundo */
+    font-size: 1.7vw;
+    /* Define o tamanho da fonte relativo à largura da tela (viewport) */
+    width: 100%;
+    /* Largura fixa dos botões */
+    display: flex;
+    /* Ativa o flexbox dentro do botão */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente */
+    align-items: center;
+    /* Centraliza o texto verticalmente */
+    justify-content: space-evenly
+        /* Distribui o conteúdo uniformemente no botão */
 }
 
 .modal-btn:hover {
-    background-color: #4CAF50; /* Muda a cor de fundo para verde ao passar o mouse */
+    background-color: #4CAF50;
+    /* Muda a cor de fundo para verde ao passar o mouse */
 }
 
 @keyframes animCard {
-    from{
+    from {
         height: 70px;
         width: 200px;
     }
 
-    to{
+    to {
         height: 200px;
         width: 300px;
     }
 }
 
 @keyframes notAnimCard {
-    from{
+    from {
         height: 200px;
         width: 300px;
     }
 
-    to{
+    to {
         height: 70px;
         width: 200px;
     }
@@ -211,20 +274,19 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: white;
     margin: 15% auto;
     padding: 20px;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     float: right;
     cursor: pointer;
     font-size: 20px;
-  }
-  
+}
