@@ -27,3 +27,19 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+const atividades = document.querySelector('.atividades');
+const MeuPerfil = document.querySelector('.MeuPerfil');
+
+const meuPerfilButton = document.querySelector('.MeuPerfil');
+
+meuPerfilButton.addEventListener('click', function () {
+    const atividades = this.querySelector('.atividades');
+    this.classList.toggle('active');
+
+    if (this.classList.contains('active')) {
+        atividades.style.height = atividades.scrollHeight + 'px';
+    } else {
+        atividades.style.height = 0;
+    }
+});
