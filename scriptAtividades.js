@@ -9,12 +9,12 @@ const modalAddress = document.getElementById('modal-addressEsporte');
 const modalImage = document.getElementById('modal-imageEsporte');
 //Botão Fechar
 const closeModal = document.querySelector('.close-btnEsporte');
-const btnInsc = document.querySelector('.btnInscricaoEsporte');
+const btnInscricaoEsporte = document.querySelector('.btnInscricaoEsporte');
 
 let Atividades = [];
 
 //Verificar e Adicionar nome do Esporte no Array Atividades
-function verificarEAdicionar(nome) {
+function verificarEAdicionarAtividades(nome) {
   if (!Atividades.includes(nome)) {
     Atividades.push(nome);
     console.log(`${nome} foi adicionado.`);
@@ -40,8 +40,8 @@ modalBtns.forEach(btn => {
     modalImage.src = image;
     modal.style.display = 'block';
 
-    btnInsc.addEventListener('click', () => {
-      verificarEAdicionar(nome);
+    btnInscricaoEsporte.addEventListener('click', () => {
+      verificarEAdicionarAtividades(nome);
     });
   });
 });
