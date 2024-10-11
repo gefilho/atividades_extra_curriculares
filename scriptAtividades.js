@@ -2,7 +2,6 @@
 const modalBtns = document.querySelectorAll('.modal-btnEsportes');
 const modal = document.getElementById('modalEsporte');
 //Propriedades
-const modalTipo = document.getElementById('modal-tipoEsporte');
 const modalNome = document.getElementById('modal-nomeEsporte');
 const modalDate = document.getElementById('modal-dateEsporte');
 const modalAddress = document.getElementById('modal-addressEsporte');
@@ -27,13 +26,11 @@ function verificarEAdicionarAtividades(nome) {
 //Mini Janela de Esportes
 modalBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    const tipo = btn.getAttribute('data-tipo');
     const nome = btn.getAttribute('data-nome');
     const date = btn.getAttribute('data-date');
     const address = btn.getAttribute('data-address');
     const image = btn.getAttribute('data-image');
     
-    modalTipo.textContent = `Tipo: ${tipo}`;
     modalNome.textContent = `Esporte: ${nome}`;
     modalDate.textContent = `Data e Hora: ${date}`;
     modalAddress.textContent = `Endereço: ${address}`;
