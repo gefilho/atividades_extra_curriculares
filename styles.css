@@ -4,6 +4,8 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: white rgba(0, 0, 0, 0.1);
 }
 
 .MeuPerfil {
@@ -205,7 +207,7 @@ h2 {
     visibility: visible;
 }
 
-.modal-btn {
+.modal-btnEventos, .modal-btnEsportes {
     text-decoration: none;
     text-align: center;
     background-color: #FFA500; /* Define a cor de fundo laranja */
@@ -223,9 +225,8 @@ h2 {
     justify-content: space-evenly /* Distribui o conteúdo uniformemente no botão */
 }
 
-.modal-btn:hover {
+.modal-btnEventos:hover, .modal-btnEsportes:hover {
     background-color: #4CAF50;
-    /* Muda a cor de fundo para verde ao passar o mouse */
 }
 
 .clubs-title {
@@ -317,8 +318,6 @@ h2 {
     width: 350px; /* Largura padrão */
 }
 
-
-
 @keyframes animCard {
     from {
         height: 150px;
@@ -348,12 +347,8 @@ h2 {
     border-radius: 10px;
 }
 
-html {
-    scrollbar-width: thin;
-    scrollbar-color: white rgba(0, 0, 0, 0.1);
-}
 
-.modal {
+.modalEvento, .modalEsporte, .modalPerfilEsporte {
     display: none;
     position: fixed;
     left: 0;
@@ -363,16 +358,16 @@ html {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
+.modal-contentEvento, .modal-contentEsporte, .modal-contentPerfilEsporte{
     background-color: white;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
 }
 
-.close-btn {
+.close-btnEvento, .close-btnEsporte, .close-btnPerfilEsporte{
     float: right;
     cursor: pointer;
     font-size: 20px;

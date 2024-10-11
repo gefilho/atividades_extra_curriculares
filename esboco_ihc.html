@@ -4,90 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades Acadêmicas</title>
+    <title>Atividades ExtraCurriculares</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
    <div class="background">
-        <div class="MeuPerfil">
-            <div class="btnPerfil">
-                <p>Meu Perfil</p>
-                <img src="imagens/icons8-down-arrow-50.png" alt="Seta baixo">
-            </div>
-            <div class="atividades">
-                <button class="minhasAtividades">Minhas Atividades</button>
-                <button class="meusEventos">Eventos</button>
-                <button>Meus Certificados</button>
-            </div>
+    <div class="MeuPerfil">
+        <div class="btnPerfil">
+            <p>Meu Perfil</p>
+            <img src="imagens/icons8-down-arrow-50.png" alt="Seta baixo">
         </div>
-                  
-        <div class="section sports animação">
-            <h2 class="sports-title">Esportes</h2>
-            <div class="sports-buttons">
-                <button class="sport-button modal-btn" data-nome="Futsal" data-date="15/10 17:00"
-                    data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">Futsal</button>
-                <button class="sport-button modal-btn" data-nome="Vôlei" data-date="16/10 17:00"
-                    data-address="Rua Padre Ibiapina, 1129, Centro" data-image="imagens/volei.jpeg">Vôlei</button>
-                <button class="sport-button modal-btn" data-nome="Basquete" data-date="16/10 19:00"
-                    data-address="Rua Padre Ibiapina, 1280, Centro" data-image="imagens/basquete.jpg">Basquete</button>
-            </div>
+        <div class="atividades">
+            <button class="minhasAtividades">Minhas Atividades</button>
+            <button class="meusEventos">Meus Eventos</button>
+            <button>Clubes Acadêmicos</button>
+            <button>Meus Certificados</button>
         </div>
-        <div class="section events animação">
-            <h2>Eventos e Palestras</h2>
-            <nav class="containerLinks">
-                <button class="modal-btn" data-nome="Feira de Iniciação Científica" data-date="SAB, 05 SET - 09:00"
-                    data-address="Rua das Universidades, 123, Centro Acadêmico"
-                    data-image="imagens/iniciacao_cientifica.png">Feira de Iniciação Científica</button>
-                <button class="modal-btn" data-nome="Futsal Interfaculdades" data-date="15 NOV > 17 NOV - 08:00"
-                    data-address="Av. dos Atletas, 456, Bairro Esportivo" data-image="imagens/Futsal.webp">Torneio de
-                    Futsal Interfaculdades</button>
-                <button class="modal-btn" data-nome="Semana de Tecnologia e Inovação" data-date="02 DEZ > 06 DEZ 09:00"
-                    data-address="Av. da Inovação, 789, Parque Tecnológico"
-                    data-image="imagens/Semana de Tecnologia e Inovação.png">Semana de Tecnologia e Inovação</button>
-                <button class="modal-btn" data-nome="Hackathon Social" data-date="25 NOV - 19:00"
-                    data-address="Rua da Música, 321, Auditório Central" data-image="imagens/hackathon.png">Hackathon
-                    Social</button>
-                <button class="modal-btn" data-nome="Empreendedorismo na saúde" data-date="MAR > 05 MAR - 15:00"
-                    data-address="Av. das Artes, 987, Galeria Cultural" data-image="imagens/workshop.jpeg">Workshop
-                    Empreendedorismo na saúde</button>
-                <button class="modal-btn" data-nome="Seminário de Inovação Tecnológica" data-date="10 OUT - 14:00" data-address="Auditório Principal, Campus Central" data-image="imagens/seminario.webp">Seminário de Inovação Tecnológica</button>
-            </nav>
-            <div class="icon events-icon"></div>
-        </div>
-        <div class="section clubs animação">
-            <h2 class="clubs-title">Clubes Acadêmicos</h2>
-            <div class="icon clubs-icon"></div>
-            <div class="clubs-buttons">
-                <button class="club-button">Clube de Ciências</button>
-                <button class="club-button">Clube de Tecnologia</button>
-                <button class="club-button">Clube de Artes</button>
-            </div>
-        </div>
-        
     </div>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <img id="modal-image" src="" alt="Event Image" style="width: 100%; height: 200px;">
-            <p id="modal-nome">Nome: </p>
-            <p id="modal-date">Data e Hora</p>
-            <p id="modal-address">Endereço</p>
-            <button class="btnIncri">Realizar Inscrição</button>
+                  
+    <div class="section sports animação">
+        <h2 class="sports-title">Esportes</h2>
+        <div class="sports-buttons">
+            <button class="sport-button modal-btnEsportes" data-tipo="Esporte" data-nome="Futsal" data-date="15/10 17:00" data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
+                Futsal
+            </button>
+            <button class="sport-button modal-btnEsportes" data-nome="Vôlei" data-date="16/10 17:00"
+                data-address="Rua Padre Ibiapina, 1129, Centro" data-image="imagens/volei.jpeg">
+                Vôlei
+            </button>
+            <button class="sport-button modal-btnEsportes" data-nome="Basquete" data-date="16/10 19:00"
+                data-address="Rua Padre Ibiapina, 1280, Centro" data-image="imagens/basquete.jpg">
+                Basquete
+            </button>
+        </div>
+    </div>
+    <div class="section events animação">
+        <h2>Eventos e Palestras</h2>
+        <nav class="containerLinks">
+            <button class="modal-btnEventos" data-nome="Feira de Iniciação Científica" data-date="SAB, 05 SET - 09:00" data-address="Rua das Universidades, 123, Centro Acadêmico" data-image="imagens/iniciacao_cientifica.png">
+                Feira de Iniciação Científica
+            </button>
+            <button class="modal-btnEventos" data-nome="Futsal Interfaculdades" data-date="15 NOV > 17 NOV - 08:00"
+                data-address="Av. dos Atletas, 456, Bairro Esportivo" data-image="imagens/Futsal.webp">
+                Torneio de Futsal Interfaculdades
+            </button>
+            <button class="modal-btnEventos" data-nome="Semana de Tecnologia e Inovação" data-date="02 DEZ > 06 DEZ 09:00" data-address="Av. da Inovação, 789, Parque Tecnológico" data-image="imagens/Semana de Tecnologia e Inovação.png">
+                Semana de Tecnologia e Inovação
+            </button>
+            <button class="modal-btnEventos" data-nome="Hackathon Social" data-date="25 NOV - 19:00"
+                data-address="Rua da Música, 321, Auditório Central" data-image="imagens/hackathon.png">
+                Hackathon Social
+            </button>
+            <button class="modal-btnEventos" data-nome="Empreendedorismo na saúde" data-date="MAR > 05 MAR - 15:00"
+                data-address="Av. das Artes, 987, Galeria Cultural" data-image="imagens/workshop.jpeg">Workshop
+                Empreendedorismo na saúde
+            </button>
+            <button class="modal-btnEventos" data-nome="Seminário de Inovação Tecnológica" data-date="10 OUT - 14:00" data-address="Auditório Principal, Campus Central" data-image="imagens/seminario.webp">
+                Seminário de Inovação Tecnológica
+            </button>
+        </nav>
+        <div class="icon events-icon"></div>
+    </div>
+    <div class="section clubs animação">
+        <h2 class="clubs-title">Clubes Acadêmicos</h2>
+        <div class="icon clubs-icon"></div>
+        <div class="clubs-buttons">
+            <button class="club-button">Clube de Ciências</button>
+            <button class="club-button">Clube de Tecnologia</button>
+            <button class="club-button">Clube de Artes</button>
+        </div>
+    </div>
+    </div>
+
+    <div id="modalEvento" class="modalEvento">
+        <div class="modal-contentEvento">
+            <span class="close-btnEvento">&times;</span>
+            <img id="modal-imageEventos" src="" alt="Event Image" style="width: 100%; height: 200px;">
+            <h2>Eventos e Palestras</h2>
+            <p id="modal-nomeEventos">Nome: </p>
+            <p id="modal-dateEventos">Data e Hora</p>
+            <p id="modal-addressEventos">Endereço</p>
+            <button class="btnIncriEventos">Realizar Inscrição</button>
         </div>
     </div>
 
-    <div id="modalAtividades" class="modal">
-        <div class="modal-content">
-          <span class="close-btn">&times;</span>
-          <h2>Meus Eventos</h2>
-          <ul id="atividades-list">
+    <div id="modalEsporte" class="modalEsporte">
+        <div class="modal-contentEsporte">
+            <span class="close-btnEsporte">&times;</span>
+            <img id="modal-imageEsporte" src="" alt="Event Image" style="width: 100%; height: 200px;">
+            <h2>Esportes</h2>
+            <p id="modal-tipoEsporte">Tipo: </p>
+            <p id="modal-nomeEsporte">Nome: </p>
+            <p id="modal-dateEsporte">Data e Hora</p>
+            <p id="modal-addressEsporte">Endereço</p>
+            <button class="btnInscricaoEsporte">Realizar Inscrição</button>
+        </div>
+    </div>
+
+    <div id="modalPerfilEsporte" class="modalPerfilEsporte">
+        <div class="modal-contentPerfilEsporte">
+          <span class="close-btnPerfilEsporte">&times;</span>
+          <h2>Meus Esportes</h2>
+          <ul id="esportes-list">
           </ul>
         </div>
-      </div>      
+    </div>
 
     <script src="script.js"></script>
-    <script src="scriptEvento.js"></script>
     <script src="scriptAtividades.js"></script>
+    <script src="scriptMeuPerfil.js"></script>
 </body>
 </html>
