@@ -49,20 +49,6 @@ window.addEventListener('click', (e) => {
   }
 });
 
-const meuPerfilButton = document.querySelector('.btnPerfil');
-
-meuPerfilButton.addEventListener('click', function () {
-    const MeuPerfil = this.closest('.MeuPerfil'); // Seleciona o container do "Meu Perfil"
-    const atividades = MeuPerfil.querySelector('.atividades');
-    MeuPerfil.classList.toggle('active');
-
-    if (MeuPerfil.classList.contains('active')) {
-        atividades.style.height = atividades.scrollHeight + 'px';
-    } else {
-        atividades.style.height = 0;
-    }
-});
-
 // Seletor para o modal de atividades
 const modalAtividades = document.getElementById('modalAtividades');
 const atividadesList = document.getElementById('atividades-list');
