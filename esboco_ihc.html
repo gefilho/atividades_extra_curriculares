@@ -18,7 +18,7 @@
         <div class="atividades">
             <button class="minhasAtividades">Minhas Atividades</button>
             <button class="meusEventos">Meus Eventos</button>
-            <button>Clubes Acadêmicos</button>
+            <button class="meusClubes">Clubes Acadêmicos</button>
             <button>Meus Certificados</button>
         </div>
     </div>
@@ -26,14 +26,14 @@
     <div class="section sports animação">
         <h2 class="sports-title">Esportes</h2>
         <div class="sports-buttons">
-            <button class="sport-button modal-btnEsportes" data-tipo="Esporte" data-nome="Futsal" data-date="15/10 17:00" data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
+            <button class="modal-btnEsportes" data-tipo="Esporte" data-nome="Futsal" data-date="15/10 17:00" data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
                 Futsal
             </button>
-            <button class="sport-button modal-btnEsportes" data-nome="Vôlei" data-date="16/10 17:00"
+            <button class="modal-btnEsportes" data-nome="Vôlei" data-date="16/10 17:00"
                 data-address="Rua Padre Ibiapina, 1129, Centro" data-image="imagens/volei.jpeg">
                 Vôlei
             </button>
-            <button class="sport-button modal-btnEsportes" data-nome="Basquete" data-date="16/10 19:00"
+            <button class="modal-btnEsportes" data-nome="Basquete" data-date="16/10 19:00"
                 data-address="Rua Padre Ibiapina, 1280, Centro" data-image="imagens/basquete.jpg">
                 Basquete
             </button>
@@ -68,13 +68,11 @@
     </div>
     <div class="section clubs animação">
         <h2 class="clubs-title">Clubes Acadêmicos</h2>
-        <div class="icon clubs-icon"></div>
         <div class="clubs-buttons">
-            <button class="club-button">Clube de Ciências</button>
-            <button class="club-button">Clube de Tecnologia</button>
-            <button class="club-button">Clube de Artes</button>
+            <button class="modal-btnClubes" data-nome="Clube de Ciências" data-date="A partir das 10:00" data-address="Sala 209" data-image="">Clube de Ciências</button>
+            <button class="modal-btnClubes" data-nome="Clube de Tecnologia" data-date="16:00" data-address="Sala 321" data-image="">Clube de Tecnologia</button>
+            <button class="modal-btnClubes" data-nome="Clube de Artes" data-date="08:00" data-address="Sala 109" data-image="">Clube de Artes</button>
         </div>
-    </div>
     </div>
 
     <div id="modalEvento" class="modalEvento">
@@ -102,6 +100,18 @@
         </div>
     </div>
 
+    <div id="modalClubes" class="modalClubes">
+        <div class="modal-contentClubes">
+            <span class="close-btnClubes">&times;</span>
+            <img id="modal-imageClubes" src="" alt="Clubes Image" style="width: 100%; height: 200px;">
+            <h2>Clubes</h2>
+            <p id="modal-nomeClubes"></p>
+            <p id="modal-dateClubes"></p>
+            <p id="modal-addressClubes"></p>
+            <button class="btnInscricaoClubes">Realizar Inscrição</button>
+        </div>
+    </div>
+
     <div id="modalPerfilEsporte" class="modalPerfilEsporte">
         <div class="modal-contentPerfilEsporte">
           <span class="close-btnPerfilEsporte">&times;</span>
@@ -120,9 +130,19 @@
         </div>
     </div>
 
+    <div id="modalPerfilClubes" class="modalPerfilClubes">
+        <div class="modal-contentPerfilClubes">
+          <span class="close-btnPerfilClubes">&times;</span>
+          <h2>Meus Clubes Academicos</h2>
+          <ul id="Clubes-list">
+          </ul>
+        </div>
+    </div>
+
     <script src="scriptEventos.js"></script>
     <script src="scriptAtividades.js"></script>
     <script src="scriptMeuPerfil.js"></script>
+    <script src="scriptClubesAcademicos.js"></script>
 </body>
 
 </html>

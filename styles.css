@@ -207,7 +207,7 @@ h2 {
     visibility: visible;
 }
 
-.modal-btnEventos, .modal-btnEsportes {
+.modal-btnEventos, .modal-btnEsportes, .modal-btnClubes {
     text-decoration: none;
     text-align: center;
     background-color: #FFA500; /* Define a cor de fundo laranja */
@@ -225,7 +225,7 @@ h2 {
     justify-content: space-evenly /* Distribui o conteúdo uniformemente no botão */
 }
 
-.modal-btnEventos:hover, .modal-btnEsportes:hover {
+.modal-btnEventos:hover, .modal-btnEsportes:hover, .modal-btnClubes:hover {
     background-color: #4CAF50;
 }
 
@@ -348,7 +348,7 @@ h2 {
 }
 
 
-.modalEvento, .modalEsporte, .modalPerfilEsporte, .modalPerfilEventos {
+.modalEvento, .modalEsporte, .modalClubes, .modalPerfilEsporte, .modalPerfilEventos, .modalPerfilClubes {
     display: none;
     position: fixed;
     left: 0;
@@ -358,7 +358,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-contentEvento, .modal-contentEsporte, .modal-contentPerfilEsporte, .modal-contentPerfilEventos{
+.modal-contentEvento, .modal-contentEsporte, .modal-contentClubes, .modal-contentPerfilEsporte, .modal-contentPerfilEventos, .modal-contentPerfilClubes{
     background-color: white;
     margin: 10% auto;
     padding: 20px;
@@ -367,7 +367,7 @@ h2 {
     border-radius: 10px;
 }
 
-.close-btnEvento, .close-btnEsporte, .close-btnPerfilEsporte, .close-btnPerfilEventos{
+.close-btnEvento, .close-btnEsporte, .close-btnClubes , .close-btnPerfilEsporte, .close-btnPerfilEventos , .close-btnPerfilClubes{
     float: right;
     cursor: pointer;
     font-size: 20px;
