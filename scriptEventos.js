@@ -77,7 +77,7 @@ function mostrarEventos() {
       const excluirBtn = document.createElement('button');
       excluirBtn.textContent = 'Excluir';
       excluirBtn.style.marginLeft = '10px';
-      excluirBtn.addEventListener('click', () => excluirAtividade(index));
+      excluirBtn.addEventListener('click', () => excluirEvento(index));
 
       // Adiciona o botão ao item da lista
       li.appendChild(excluirBtn);
@@ -86,7 +86,7 @@ function mostrarEventos() {
 }}
 
 // Função para remover uma atividade do array e atualizar a lista
-function excluirAtividade(index) {
+function excluirEvento(index) {
   Eventos.splice(index, 1); // Remove a atividade do array
   mostrarEventos(); // Atualiza o modal para refletir a mudança
 }
