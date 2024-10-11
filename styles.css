@@ -348,7 +348,7 @@ h2 {
 }
 
 
-.modalEvento, .modalEsporte, .modalPerfilEsporte {
+.modalEvento, .modalEsporte, .modalPerfilEsporte, .modalPerfilEventos {
     display: none;
     position: fixed;
     left: 0;
@@ -358,7 +358,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-contentEvento, .modal-contentEsporte, .modal-contentPerfilEsporte{
+.modal-contentEvento, .modal-contentEsporte, .modal-contentPerfilEsporte, .modal-contentPerfilEventos{
     background-color: white;
     margin: 10% auto;
     padding: 20px;
@@ -367,7 +367,7 @@ h2 {
     border-radius: 10px;
 }
 
-.close-btnEvento, .close-btnEsporte, .close-btnPerfilEsporte{
+.close-btnEvento, .close-btnEsporte, .close-btnPerfilEsporte, .close-btnPerfilEventos{
     float: right;
     cursor: pointer;
     font-size: 20px;
