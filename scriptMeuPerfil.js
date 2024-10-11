@@ -6,7 +6,7 @@ meuPerfilButton.addEventListener('click', function () {
     MeuPerfil.classList.toggle('active');
 
     if (MeuPerfil.classList.contains('active')) {
-        atividades.style.height = atividades.scrollHeight + 'px';
+        atividades.style.height = '200px';
     } else {
         atividades.style.height = 0;
     }

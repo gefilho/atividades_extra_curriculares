@@ -16,17 +16,17 @@
             <img src="imagens/icons8-down-arrow-50.png" alt="Seta baixo">
         </div>
         <div class="atividades">
-            <button class="minhasAtividades">Minhas Atividades</button>
-            <button class="meusEventos">Meus Eventos</button>
-            <button class="meusClubes">Clubes Acadêmicos</button>
-            <button>Meus Certificados</button>
+            <button class="minhasAtividades btnPerfil">Minhas Atividades</button>
+            <button class="meusEventos btnPerfil">Meus Eventos</button>
+            <button class="meusClubes btnPerfil">Clubes Acadêmicos</button>
+            <button class="btnPerfil">Meus Certificados</button>
         </div>
     </div>
                   
     <div class="section sports animação">
         <h2 class="sports-title">Esportes</h2>
         <div class="sports-buttons">
-            <button class="modal-btnEsportes" data-tipo="Esporte" data-nome="Futsal" data-date="15/10 17:00" data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
+            <button class="modal-btnEsportes" data-nome="Futsal" data-date="15/10 17:00" data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
                 Futsal
             </button>
             <button class="modal-btnEsportes" data-nome="Vôlei" data-date="16/10 17:00"
@@ -83,7 +83,7 @@
             <p id="modal-nomeEventos">Nome: </p>
             <p id="modal-dateEventos">Data e Hora</p>
             <p id="modal-addressEventos">Endereço</p>
-            <button class="btnIncricaoEventos">Realizar Inscrição</button>
+            <div class="containerBtn"><button class="btnIncricaoEventos">Realizar Inscrição</button></div>
         </div>
     </div>
 
@@ -91,12 +91,11 @@
         <div class="modal-contentEsporte">
             <span class="close-btnEsporte">&times;</span>
             <img id="modal-imageEsporte" src="" alt="Event Image" style="width: 100%; height: 200px;">
-            <h2>Esportes</h2>
-            <p id="modal-tipoEsporte">Tipo: </p>
-            <p id="modal-nomeEsporte">Nome: </p>
-            <p id="modal-dateEsporte">Data e Hora</p>
-            <p id="modal-addressEsporte">Endereço</p>
-            <button class="btnInscricaoEsporte">Realizar Inscrição</button>
+            <p id="modal-tipoEsporte"></p>
+            <p id="modal-nomeEsporte"></p>
+            <p id="modal-dateEsporte"></p>
+            <p id="modal-addressEsporte"></p>
+            <div class="containerBtn"><button class="btnInscricaoEsporte">Realizar Inscrição</button></div>
         </div>
     </div>
 
@@ -108,7 +107,7 @@
             <p id="modal-nomeClubes"></p>
             <p id="modal-dateClubes"></p>
             <p id="modal-addressClubes"></p>
-            <button class="btnInscricaoClubes">Realizar Inscrição</button>
+            <div class="containerBtn"><button class="btnInscricaoClubes">Realizar Inscrição</button></div>
         </div>
     </div>
 

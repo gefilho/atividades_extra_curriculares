@@ -6,6 +6,7 @@ html {
     height: 100%;
     scrollbar-width: thin;
     scrollbar-color: white rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .MeuPerfil {
@@ -19,6 +20,7 @@ html {
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 1;
 }
 
 .btnPerfil {
@@ -46,12 +48,26 @@ html {
     opacity: 0;
     transition: height 0.3s ease-out, opacity 0.3s ease-out;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.atividades p {
+.atividades button{
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #FFA500;
+    color: white;
     border-top: 1px solid #ccc;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btnPerfil{
+    cursor: pointer;
 }
 
 .MeuPerfil.active .atividades {
@@ -359,8 +375,10 @@ h2 {
 }
 
 .modal-contentEvento, .modal-contentEsporte, .modal-contentClubes, .modal-contentPerfilEsporte, .modal-contentPerfilEventos, .modal-contentPerfilClubes{
-    background-color: white;
-    margin: 10% auto;
+    background: rgb(76,175,80);
+    color: white;
+    font-size: 20px;
+    margin: 5% auto;
     padding: 20px;
     width: 80%;
     max-width: 500px;
@@ -371,4 +389,27 @@ h2 {
     float: right;
     cursor: pointer;
     font-size: 20px;
+}
+
+.containerBtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btnInscricaoEsporte, .btnInscricaoClubes, .btnIncricaoEventos{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.btnInscricaoEsporte:hover, .btnInscricaoClubes:hover, .btnIncricaoEventos:hover{
+    background-color: #FFA500;
+    color: white;
+}
+
+#modal-imageEsporte{
+    border-radius: 10px;
 }
