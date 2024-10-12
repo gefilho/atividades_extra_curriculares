@@ -30,7 +30,7 @@ function verificarEAdicionarClubes(nome) {
     }).showToast();
   } else {
     Toastify({
-      text: 'Você já está inscrito nesta atividade!',
+      text: 'Você já está inscrito neste Clube!',
       position: 'right',
       gravity: "top",
       duration: 2000,
@@ -108,7 +108,7 @@ function mostrarClubes() {
 function excluirClube(index) {
   Clubes.splice(index, 1); // Remove a atividade do array
   Toastify({
-    text: 'Você foi desinscrito da atividade com sucesso!',
+    text: 'Você foi desinscrito do clube com sucesso!',
     position: 'right',
     gravity: "top",
     duration: 2000,

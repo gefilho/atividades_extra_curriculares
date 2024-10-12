@@ -30,7 +30,7 @@ function verificarEAdicionarEventos(nome) {
     }).showToast();
   } else {
     Toastify({
-      text: 'Você já está inscrito nesta atividade!',
+      text: 'Você já está inscrito neste Evento!',
       position: 'right',
       gravity: "top",
       duration: 2000,
@@ -85,7 +85,7 @@ function mostrarEventos() {
   modalPerfilEventos.style.display = 'block'; // Exibe o modal
 
   if (Eventos.length === 0) {
-    eventoList.innerHTML = '<li>Nenhuma atividade encontrada.</li>';
+    eventoList.innerHTML = '<li>Nenhum evento encontrado.</li>';
   }else {
     // Adiciona cada atividade como um item de lista com botão de excluir
     Eventos.forEach((atividade, index) => {
@@ -108,7 +108,7 @@ function mostrarEventos() {
 function excluirEvento(index) {
   Eventos.splice(index, 1); // Remove a atividade do array
   Toastify({
-    text: 'Você foi desinscrito da atividade com sucesso!',
+    text: 'Você foi desinscrito do evento com sucesso!',
     position: 'right',
     gravity: "top",
     duration: 2000,

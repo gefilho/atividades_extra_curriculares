@@ -84,7 +84,7 @@ function mostrarAtividades() {
   modalPerfilEsporte.style.display = 'block'; // Exibe o modal
 
   if (Atividades.length === 0) {
-    esportesList.innerHTML = '<li>Nenhuma atividade encontrada.</li>';
+    esportesList.innerHTML = '<li>Nenhum esporte encontrado.</li>';
   }else {
     // Adiciona cada atividade como um item de lista com botão de excluir
     Atividades.forEach((atividade, index) => {
