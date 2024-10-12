@@ -19,7 +19,7 @@
             <button class="minhasAtividades btnPerfil">Minhas Atividades</button>
             <button class="meusEventos btnPerfil">Meus Eventos</button>
             <button class="meusClubes btnPerfil">Clubes Acadêmicos</button>
-            <button class="btnPerfil">Meus Certificados</button>
+            <button class="meusCertificados btnPerfil">Meus Certificados</button>
         </div>
     </div>
             
@@ -65,7 +65,7 @@
     <div class="section clubs animação">
         <h2 class="clubs-title"></h2>
         <div class="clubs-buttons">
-            <button class="modal-btnClubes" data-nome="Clube de Ciências" data-date="Todas as terças às 14:00" data-address="Sala 209" data-image="imagens/astronomia.jpg">Clube de Astronomia</button>
+            <button class="modal-btnClubes" data-nome="Clube de Astronomia" data-date="Todas as terças às 14:00" data-address="Sala 209" data-image="imagens/astronomia.jpg">Clube de Astronomia</button>
             <button class="modal-btnClubes" data-nome="Clube de Tecnologia" data-date="Todas as quartas ás 16:00" data-address="Sala 321" data-image="imagens/tecnologia.jpg">Clube de Tecnologia</button>
             <button class="modal-btnClubes" data-nome="Clube de Artes" data-date="Todas as quintas às 15:00" data-address="Sala 109" data-image="imagens/artes.jpg">Clube de Artes</button>
             <button class="modal-btnClubes" data-nome="Clube de Leitura" data-date="Todas as quintas às 14:30" data-address="Sala 301" data-image="imagens/Clubes_academicos.jpg">Clube de Leitura</button>
@@ -88,6 +88,7 @@
         <div class="modal-contentEsporte">
             <span class="close-btnEsporte">&times;</span>
             <img id="modal-imageEsporte" src="" alt="Event Image" style="width: 100%; height: 200px;">
+            <h2>Esportes</h2>
             <p id="modal-tipoEsporte"></p>
             <p id="modal-nomeEsporte"></p>
             <p id="modal-dateEsporte"></p>
@@ -135,10 +136,23 @@
         </div>
     </div>
 
+    <div id="modalPerfilCertificado" class="modalPerfilCertificado">
+        <div class="modal-contentPerfilCertificado">
+          <span class="close-btnPerfilCertificado">&times;</span>
+          <h2>Meus Certificados</h2>
+          <ul id="certificado-list">
+            <li>Certificado de Conclusão1</li>
+            <li>Certificado de Conclusão2</li>
+            <li>Certificado de Conclusão3</li>
+          </ul>
+        </div>
+    </div>
+
     <script src="scriptEventos.js"></script>
     <script src="scriptAtividades.js"></script>
     <script src="scriptMeuPerfil.js"></script>
     <script src="scriptClubesAcademicos.js"></script>
+    <script src="scriptCertificado.js"></script>
 </body>
 
 </html>
