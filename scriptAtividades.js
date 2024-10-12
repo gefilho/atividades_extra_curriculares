@@ -16,10 +16,29 @@ let Atividades = [];
 function verificarEAdicionarAtividades(nome) {
   if (!Atividades.includes(nome)) {
     Atividades.push(nome);
-    console.log(`${nome} foi adicionado.`);
-    console.log(Atividades);
+    Toastify({
+      text: 'Sucesso ao realizar a inscrição!',
+      position: 'right',
+      gravity: "top",
+      duration: 2000,
+      style: {
+          background: "#28a745",
+          color: 'white',
+          borderRadius: '10px'
+      }
+    }).showToast();
   } else {
-    console.log(`${nome} já está no array.`);
+    Toastify({
+      text: 'Você já está inscrito nesta atividade!',
+      position: 'right',
+      gravity: "top",
+      duration: 2000,
+      style: {
+          background: "#FFA500",
+          color: 'white',
+          borderRadius: '10px'
+      }
+    }).showToast();
   }
 }
 
@@ -87,6 +106,17 @@ function mostrarAtividades() {
 // Função para remover uma atividade do array e atualizar a lista
 function excluirAtividade(index) {
   Atividades.splice(index, 1); // Remove a atividade do array
+  Toastify({
+    text: 'Você foi desinscrito da atividade com sucesso!',
+    position: 'right',
+    gravity: "top",
+    duration: 2000,
+    style: {
+        background: "#e74c3c",
+        color: 'white',
+        borderRadius: '10px'
+    }
+  }).showToast();
   mostrarAtividades(); // Atualiza o modal para refletir a mudança
 }
 
