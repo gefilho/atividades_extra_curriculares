@@ -88,24 +88,19 @@ html {
 
 /* Seção transparente com conteúdo centralizado */
 .section {
-    position: relative;
-    /* Necessário para posicionar elementos internos de forma absoluta */
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Fundo branco com opacidade */
-    margin: 10px;
-    /* Margem externa de 10px em todos os lados */
+    position: relative;/* Necessário para posicionar elementos internos de forma absoluta */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+    margin: 10px;/* Margem externa de 10px em todos os lados */
     padding: 20px;
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    text-align: center;
-    /* Centraliza o texto dentro da seção */
+    border-radius: 10px;/* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto dentro da seção */
     width: 200px;
     height: 70px;
 }
 
 /* Container para a área de esportes */
 .sports {
-    background-image: url('imagens/esportes.jpg'); /* Imagem de fundo específica para o container de esportes */
+    background-image: url('imagens/esportesss.webp'); /* Imagem de fundo específica para o container de esportes */
     background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
     width: 300px; /* Define a largura do container */ 
@@ -120,7 +115,8 @@ html {
 /* Estilo do título dentro da área de esportes */
 .sports-title {
     margin: 0; /* Remove margens ao redor do título */
-    color: #038610; /* Define a cor verde para o título */
+    color: #16ae25; /* Define a cor verde para o título */
+    font-size: 60px;
 }
 
 h2 {
@@ -194,12 +190,12 @@ h2 {
 }
 
 .events {
-    color: white;
+    color: #16ae25;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(imagens/person-holding-speech-official-event.jpg);
+    background-image: url("imagens/eventos e palestras.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -278,7 +274,7 @@ h2 {
 }
 
 .clubs {
-    background-image: url('imagens/Clubes_academicos.jpg'); /* Imagem de fundo específica para o container de clubes */
+    background-image: url('imagens/clubes acadêmicos.png'); /* Imagem de fundo específica para o container de clubes */
     background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
     width: 300px; /* Define a largura do container */
