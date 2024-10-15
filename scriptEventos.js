@@ -14,52 +14,60 @@ const btnInscricaoEvento = document.querySelector('.btnIncricaoEventos');
 let Eventos = [];
 
 //Verificar e Adicionar nome do Eventos no Array Eventos
-function verificarEAdicionarEventos(nome) {
-  if (!Eventos.includes(nome)) {
-    Eventos.push(nome);
-    Toastify({
-      text: 'Sucesso ao realizar a inscrição!',
-      position: 'right',
-      gravity: "top",
-      duration: 2000,
-      style: {
-          background: "#28a745",
-          color: 'white',
-          borderRadius: '10px'
-      }
-    }).showToast();
+function verificarEAdicionarEventos(nome, date) {
+  const eventoExistente = Eventos.find(evento => evento.nome === nome && evento.date === date);
+
+  if (!eventoExistente) {
+    Eventos.push({ nome, date });
+      console.log(`${nome} foi adicionado com a data ${date}.`);
+      console.log(Eventos);
+      Toastify({
+          text: `${nome} foi adicionado com sucesso!`,
+          duration: 2000,
+          gravity: "top",
+          position: "left",
+          style: {
+            background: "#28a745",
+            color: 'white',
+            borderRadius: '10px'
+        }
+      }).showToast();
   } else {
-    Toastify({
-      text: 'Você já está inscrito neste Evento!',
-      position: 'right',
-      gravity: "top",
-      duration: 2000,
-      style: {
-          background: "#FFA500",
-          color: 'white',
-          borderRadius: '10px'
-      }
-    }).showToast();
+      console.log(`Você já está inscrito neste Evento: ${nome} no dia ${date}!`);
+      Toastify({
+          text: `Você já está inscrito neste Evento: ${nome} no dia ${date}!`,
+          duration: 2000,
+          gravity: "top",
+          position: "left",
+          style: {
+            background: "#FFA500",
+            color: 'white',
+            borderRadius: '10px'
+        }
+      }).showToast();
   }
 }
 
-//Mini Janela de Eventos
+// Mini Janela de Esportes
 modalBtnsEvento.forEach(btn => {
   btn.addEventListener('click', () => {
-    const nome = btn.getAttribute('data-nome');
-    const date = btn.getAttribute('data-date');
-    const address = btn.getAttribute('data-address');
-    const image = btn.getAttribute('data-image');
-    
-    modalNomeEvento.textContent = `Evento: ${nome}`;
-    modalDateEvento.textContent = `Data e Hora: ${date}`;
-    modalAddressEvento.textContent = `Endereço: ${address}`;
-    modalImageEvento.src = image;
-    modalEvento.style.display = 'block';
+      const nome = btn.getAttribute('data-nome');
+      const date = btn.getAttribute('data-date');
+      const address = btn.getAttribute('data-address');
+      const image = btn.getAttribute('data-image');
 
-    btnInscricaoEvento.addEventListener('click', () => {
-      verificarEAdicionarEventos(nome);
-    });
+      modalNomeEvento.textContent = `Evento: ${nome}`;
+      modalDateEvento.textContent = `Data e Hora: ${date}`;
+      modalAddressEvento.textContent = `Endereço: ${address}`;
+      modalImageEvento.src = image;
+      modalEvento.style.display = 'block';
+
+      const btnInsc = document.querySelector('.btnIncricaoEventos');
+      btnInsc.replaceWith(btnInsc.cloneNode(true));
+
+      document.querySelector('.btnIncricaoEventos').addEventListener('click', () => {
+        verificarEAdicionarEventos(nome, date);
+      });
   });
 });
 
@@ -90,7 +98,8 @@ function mostrarEventos() {
     // Adiciona cada atividade como um item de lista com botão de excluir
     Eventos.forEach((atividade, index) => {
       const li = document.createElement('li');
-      li.textContent = atividade;
+
+      li.textContent = atividade.nome; // Exibe o nome da atividade
 
       // Cria o botão de exclusão
       const excluirBtn = document.createElement('button');
@@ -109,7 +118,7 @@ function excluirEvento(index) {
   Eventos.splice(index, 1); // Remove a atividade do array
   Toastify({
     text: 'Você foi desinscrito do evento com sucesso!',
-    position: 'right',
+    position: 'left',
     gravity: "top",
     duration: 2000,
     style: {

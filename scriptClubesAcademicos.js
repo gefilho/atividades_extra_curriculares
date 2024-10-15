@@ -14,54 +14,63 @@ const btnInscricaoClubes = document.querySelector('.btnInscricaoClubes');
 let Clubes = [];
 
 //Verificar e Adicionar nome do Eventos no Array Eventos
-function verificarEAdicionarClubes(nome) {
-  if (!Clubes.includes(nome)) {
-    Clubes.push(nome);
-    Toastify({
-      text: 'Sucesso ao realizar a inscrição!',
-      position: 'right',
-      gravity: "top",
-      duration: 2000,
-      style: {
-          background: "#28a745",
-          color: 'white',
-          borderRadius: '10px'
-      }
-    }).showToast();
+function verificarEAdicionarClubes(nome, date) {
+  const clubeExistente = Clubes.find(atividade => atividade.nome === nome && atividade.date === date);
+
+  if (!clubeExistente) {
+    Clubes.push({ nome, date });
+      console.log(`${nome} foi adicionado com a data ${date}.`);
+      console.log(Clubes);
+      Toastify({
+          text: `${nome} foi adicionado com sucesso!`,
+          duration: 2000,
+          gravity: "top",
+          position: "left",
+          style: {
+            background: "#28a745",
+            color: 'white',
+            borderRadius: '10px'
+        }
+      }).showToast();
   } else {
-    Toastify({
-      text: 'Você já está inscrito neste Clube!',
-      position: 'right',
-      gravity: "top",
-      duration: 2000,
-      style: {
-          background: "#FFA500",
-          color: 'white',
-          borderRadius: '10px'
-      }
-    }).showToast();
+      console.log(`Você já está inscrito neste clube: ${nome} no dia ${date}!`);
+      Toastify({
+          text: `Você já está inscrito neste clube: ${nome} no dia ${date}!`,
+          duration: 2000,
+          gravity: "top",
+          position: "left",
+          style: {
+            background: "#FFA500",
+            color: 'white',
+            borderRadius: '10px'
+        }
+      }).showToast();
   }
 }
 
-//Mini Janela de Eventos
+// Mini Janela de Esportes
 modalBtnsClubes.forEach(btn => {
   btn.addEventListener('click', () => {
-    const nome = btn.getAttribute('data-nome');
-    const date = btn.getAttribute('data-date');
-    const address = btn.getAttribute('data-address');
-    const image = btn.getAttribute('data-image');
-    
-    modalNomeClubes.textContent = `Clube: ${nome}`;
-    modalDateClubes.textContent = `Data e Hora: ${date}`;
-    modalAddressClubes.textContent = `Endereço: ${address}`;
-    modalImageClubes.src = image;
-    modalClubes.style.display = 'block';
+      const nome = btn.getAttribute('data-nome');
+      const date = btn.getAttribute('data-date');
+      const address = btn.getAttribute('data-address');
+      const image = btn.getAttribute('data-image');
 
-    btnInscricaoClubes.addEventListener('click', () => {
-        verificarEAdicionarClubes(nome);
-    });
+      modalNomeClubes.textContent = `Clube: ${nome}`;
+      modalDateClubes.textContent = `Data e Hora: ${date}`;
+      modalAddressClubes.textContent = `Endereço: ${address}`;
+      modalImageClubes.src = image;
+      modalClubes.style.display = 'block';
+
+      const btnInsc = document.querySelector('.btnInscricaoClubes');
+      btnInsc.replaceWith(btnInsc.cloneNode(true));
+
+      document.querySelector('.btnInscricaoClubes').addEventListener('click', () => {
+        verificarEAdicionarClubes(nome, date);
+      });
   });
 });
+
 
 closeModalClubes.addEventListener('click', () => {
     modalClubes.style.display = 'none';
@@ -90,7 +99,7 @@ function mostrarClubes() {
     // Adiciona cada atividade como um item de lista com botão de excluir
     Clubes.forEach((atividade, index) => {
       const li = document.createElement('li');
-      li.textContent = atividade;
+      li.textContent = atividade.nome;
 
       // Cria o botão de exclusão
       const excluirBtn = document.createElement('button');
@@ -109,7 +118,7 @@ function excluirClube(index) {
   Clubes.splice(index, 1); // Remove a atividade do array
   Toastify({
     text: 'Você foi desinscrito do clube com sucesso!',
-    position: 'right',
+    position: 'left',
     gravity: "top",
     duration: 2000,
     style: {

@@ -10,56 +10,65 @@ const modalImage = document.getElementById('modal-imageEsporte');
 const closeModal = document.querySelector('.close-btnEsporte');
 const btnInscricaoEsporte = document.querySelector('.btnInscricaoEsporte');
 
+// Array para armazenar as atividades inscritas
 let Atividades = [];
 
-//Verificar e Adicionar nome do Esporte no Array Atividades
-function verificarEAdicionarAtividades(nome) {
-  if (!Atividades.includes(nome)) {
-    Atividades.push(nome);
-    Toastify({
-      text: 'Sucesso ao realizar a inscrição!',
-      position: 'right',
-      gravity: "top",
-      duration: 2000,
-      style: {
-          background: "#28a745",
-          color: 'white',
-          borderRadius: '10px'
-      }
-    }).showToast();
-  } else {
-    Toastify({
-      text: 'Você já está inscrito nesta atividade!',
-      position: 'right',
-      gravity: "top",
-      duration: 2000,
-      style: {
-          background: "#FFA500",
-          color: 'white',
-          borderRadius: '10px'
-      }
-    }).showToast();
-  }
+// Função para verificar e adicionar esporte, verificando nome e data
+function verificarEAdicionarEsporte(nome, date) {
+    const atividadeExistente = Atividades.find(atividade => atividade.nome === nome && atividade.date === date);
+
+    if (!atividadeExistente) {
+        Atividades.push({ nome, date });
+        console.log(`${nome} foi adicionado com a data ${date}.`);
+        console.log(Atividades);
+        Toastify({
+            text: `${nome} foi adicionado com sucesso!`,
+            duration: 2000,
+            gravity: "top",
+            position: "left",
+            style: {
+              background: "#28a745",
+              color: 'white',
+              borderRadius: '10px'
+          }
+        }).showToast();
+    } else {
+        console.log(`Você já está inscrito nesta atividade: ${nome} no dia ${date}!`);
+        Toastify({
+            text: `Você já está inscrito nesta atividade: ${nome} no dia ${date}!`,
+            duration: 2000,
+            gravity: "top",
+            position: "left",
+            style: {
+              background: "#FFA500",
+              color: 'white',
+              borderRadius: '10px'
+          }
+        }).showToast();
+    }
 }
 
-//Mini Janela de Esportes
-modalBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const nome = btn.getAttribute('data-nome');
-    const date = btn.getAttribute('data-date');
-    const address = btn.getAttribute('data-address');
-    const image = btn.getAttribute('data-image');
-    
-    modalNome.textContent = `Esporte: ${nome}`;
-    modalDate.textContent = `Data e Hora: ${date}`;
-    modalAddress.textContent = `Endereço: ${address}`;
-    modalImage.src = image;
-    modal.style.display = 'block';
+// Mini Janela de Esportes
+document.querySelectorAll('.modal-btnEsportes').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const nome = btn.getAttribute('data-nome');
+        const date = btn.getAttribute('data-date');
+        const address = btn.getAttribute('data-address');
+        const image = btn.getAttribute('data-image');
 
-    btnInscricaoEsporte.addEventListener('click', () => {
-      verificarEAdicionarAtividades(nome);
+        document.getElementById('modal-nomeEsporte').textContent = `Esporte: ${nome}`;
+        document.getElementById('modal-dateEsporte').textContent = `Data e Hora: ${date}`;
+        document.getElementById('modal-addressEsporte').textContent = `Endereço: ${address}`;
+        document.getElementById('modal-imageEsporte').src = image;
+        document.getElementById('modalEsporte').style.display = 'block';
+
+        const btnInsc = document.querySelector('.btnInscricaoEsporte');
+        btnInsc.replaceWith(btnInsc.cloneNode(true));
+
+        document.querySelector('.btnInscricaoEsporte').addEventListener('click', () => {
+            verificarEAdicionarEsporte(nome, date);
+        });
     });
-  });
 });
 
 closeModal.addEventListener('click', () => {
@@ -89,14 +98,16 @@ function mostrarAtividades() {
     // Adiciona cada atividade como um item de lista com botão de excluir
     Atividades.forEach((atividade, index) => {
       const li = document.createElement('li');
-      li.textContent = atividade;
-
+    
+      // Supondo que 'atividade' seja um objeto com a propriedade 'nome'
+      li.textContent = atividade.nome; // Exibe o nome da atividade
+    
       // Cria o botão de exclusão
       const excluirBtn = document.createElement('button');
       excluirBtn.textContent = 'Excluir';
       excluirBtn.style.marginLeft = '10px';
       excluirBtn.addEventListener('click', () => excluirAtividade(index));
-
+    
       // Adiciona o botão ao item da lista
       li.appendChild(excluirBtn);
       esportesList.appendChild(li);
@@ -108,7 +119,7 @@ function excluirAtividade(index) {
   Atividades.splice(index, 1); // Remove a atividade do array
   Toastify({
     text: 'Você foi desinscrito da atividade com sucesso!',
-    position: 'right',
+    position: 'left',
     gravity: "top",
     duration: 2000,
     style: {
