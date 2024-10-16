@@ -28,7 +28,7 @@ html {
     align-items: center;
 }
 
-.btnPerfil img{
+.btnPerfil img {
     width: 30px;
     height: 30px;
 }
@@ -54,7 +54,7 @@ html {
     align-items: center;
 }
 
-.atividades button{
+.atividades button {
     padding: 10px;
     background-color: #FFA500;
     color: white;
@@ -65,11 +65,11 @@ html {
     cursor: pointer;
 }
 
-.atividades button:hover{
+.atividades button:hover {
     border: 1px solid white;
 }
 
-.btnPerfil{
+.btnPerfil {
     cursor: pointer;
 }
 
@@ -80,45 +80,69 @@ html {
 
 .background {
     position: relative;
-    background-image: url('imagens/plano de fundo.jpg'); /* Define uma imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a área disponível */
-    background-position: center center; /* Centraliza a imagem no centro da tela */
-    height: 100%; /* Define altura para ocupar toda a tela */
-    display: flex; /* Define um layout flexível para centralização de elementos internos */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    background-image: url('imagens/plano de fundo.jpg');
+    /* Define uma imagem de fundo */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área disponível */
+    background-position: center center;
+    /* Centraliza a imagem no centro da tela */
+    height: 100%;
+    /* Define altura para ocupar toda a tela */
+    display: flex;
+    /* Define um layout flexível para centralização de elementos internos */
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo */
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo */
 }
 
 /* Seção transparente com conteúdo centralizado */
 .section {
-    position: relative;/* Necessário para posicionar elementos internos de forma absoluta */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
-    margin: 10px;/* Margem externa de 10px em todos os lados */
+    position: relative;
+    /* Necessário para posicionar elementos internos de forma absoluta */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo branco com opacidade */
+    margin: 10px;
+    /* Margem externa de 10px em todos os lados */
     padding: 20px;
-    border-radius: 10px;/* Bordas arredondadas */
-    text-align: center; /* Centraliza o texto dentro da seção */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    text-align: center;
+    /* Centraliza o texto dentro da seção */
     width: 200px;
     height: 70px;
 }
 
 /* Container para a área de esportes */
 .sports {
-    background-image: url('imagens/esportesss.webp'); /* Imagem de fundo específica para o container de esportes */
-    background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
-    background-position: center; /* Centraliza a imagem de fundo */
-    width: 300px; /* Define a largura do container */ 
-    height: 200px; /* Define a altura do container */
-    display: flex; /* Usa flexbox para organizar os elementos dentro */
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    overflow: hidden; /* Oculta qualquer conteúdo que exceda o container */
+    background-image: url('imagens/esportesss.webp');
+    /* Imagem de fundo específica para o container de esportes */
+    background-size: cover;
+    /* Faz a imagem de fundo cobrir toda a área */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    width: 300px;
+    /* Define a largura do container */
+    height: 200px;
+    /* Define a altura do container */
+    display: flex;
+    /* Usa flexbox para organizar os elementos dentro */
+    flex-direction: column;
+    /* Alinha os elementos verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens verticalmente */
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que exceda o container */
 }
 
 /* Estilo do título dentro da área de esportes */
 .sports-title {
-    margin: 0; /* Remove margens ao redor do título */
-    color: #16ae25; /* Define a cor verde para o título */
+    margin: 0;
+    /* Remove margens ao redor do título */
+    color: #16ae25;
+    /* Define a cor verde para o título */
     font-size: 60px;
 }
 
@@ -128,19 +152,27 @@ h2 {
 
 /* Esconde o título ao passar o mouse */
 .sports:hover .sports-title {
-    opacity: 0; /* Faz o título desaparecer ao passar o mouse */
+    opacity: 0;
+    /* Faz o título desaparecer ao passar o mouse */
 }
 
 /* Container dos botões, inicialmente escondido */
 .sports-buttons {
-    display: none; /* Esconde os botões por padrão */
-    margin-top: 10px; /* Espaçamento acima dos botões */
-    gap: 20px; /* Define um espaçamento entre os botões */
-    flex-direction: column; /* Alinha os botões verticalmente */
-    align-items: center; /* Centraliza os botões horizontalmente */
-    justify-content: space-between; /* Distribui os botões uniformemente */
+    display: none;
+    /* Esconde os botões por padrão */
+    margin-top: 10px;
+    /* Espaçamento acima dos botões */
+    gap: 20px;
+    /* Define um espaçamento entre os botões */
+    flex-direction: column;
+    /* Alinha os botões verticalmente */
+    align-items: center;
+    /* Centraliza os botões horizontalmente */
+    justify-content: space-between;
+    /* Distribui os botões uniformemente */
     width: 100%;
-    height: 100%; /* Define a altura total do container */
+    height: 100%;
+    /* Define a altura total do container */
 }
 
 /* Exibe os botões ao passar o mouse sobre o container de esportes */
@@ -151,25 +183,40 @@ h2 {
 
 /* Estilo dos botões dentro da seção de esportes */
 .sport-button {
-    background-color: #FFA500; /* Define a cor de fundo laranja */
-    color: white; /* Define a cor do texto como branco */
-    border: none; /* Remove a borda padrão */
-    padding: 15px 0; /* Adiciona espaçamento vertical dentro do botão */
-    border-radius: 50px; /* Bordas arredondadas no botão */
-    cursor: pointer; /* Aplica o cursor de "mãozinha" ao passar o mouse */
-    transition: background-color 0.3s ease; /* Aplica transição suave ao mudar a cor de fundo */
-    font-size: 1.7vw; /* Define o tamanho da fonte relativo à largura da tela (viewport) */
-    width: 250px; /* Largura fixa dos botões */
-    height: 40px; /* Define altura para ajustar o tamanho do botão */
-    display: flex; /* Ativa o flexbox dentro do botão */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    justify-content: space-evenly /* Distribui o conteúdo uniformemente no botão */
+    background-color: #FFA500;
+    /* Define a cor de fundo laranja */
+    color: white;
+    /* Define a cor do texto como branco */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 15px 0;
+    /* Adiciona espaçamento vertical dentro do botão */
+    border-radius: 50px;
+    /* Bordas arredondadas no botão */
+    cursor: pointer;
+    /* Aplica o cursor de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease;
+    /* Aplica transição suave ao mudar a cor de fundo */
+    font-size: 1.7vw;
+    /* Define o tamanho da fonte relativo à largura da tela (viewport) */
+    width: 250px;
+    /* Largura fixa dos botões */
+    height: 40px;
+    /* Define altura para ajustar o tamanho do botão */
+    display: flex;
+    /* Ativa o flexbox dentro do botão */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente */
+    align-items: center;
+    /* Centraliza o texto verticalmente */
+    justify-content: space-evenly
+        /* Distribui o conteúdo uniformemente no botão */
 }
 
 /* Muda a cor do botão ao passar o mouse */
 .sport-button:hover {
-    background-color: #4CAF50; /* Muda a cor de fundo para verde ao passar o mouse */
+    background-color: #4CAF50;
+    /* Muda a cor de fundo para verde ao passar o mouse */
 }
 
 .animação:hover {
@@ -204,7 +251,8 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.containerLinks, .clubs-buttons {
+.containerLinks,
+.clubs-buttons {
     overflow: auto;
     width: 100%;
     height: 100%;
@@ -217,36 +265,56 @@ h2 {
     transition: opacity 400ms ease, visibility 400ms ease;
 }
 
-.animação:hover .containerLinks, .animação:hover .clubs-buttons {
+.animação:hover .containerLinks,
+.animação:hover .clubs-buttons {
     opacity: 1;
     visibility: visible;
 }
 
-.modal-btnEventos, .modal-btnEsportes, .modal-btnClubes {
+.modal-btnEventos,
+.modal-btnEsportes,
+.modal-btnClubes {
     text-decoration: none;
     text-align: center;
-    background-color: #FFA500; /* Define a cor de fundo laranja */
-    color: white; /* Define a cor do texto como branco */
-    border: none; /* Remove a borda padrão */
-    padding: 15px; /* Adiciona espaçamento vertical dentro do botão */
-    border-radius: 50px; /* Bordas arredondadas no botão */
-    cursor: pointer; /* Aplica o cursor de "mãozinha" ao passar o mouse */
-    transition: background-color 0.3s ease; /* Aplica transição suave ao mudar a cor de fundo */
-    font-size: 1.7vw;  /* Define o tamanho da fonte relativo à largura da tela (viewport) */
-    width: 100%; /* Largura fixa dos botões */
-    display: flex; /* Ativa o flexbox dentro do botão */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    justify-content: space-evenly /* Distribui o conteúdo uniformemente no botão */
+    background-color: #FFA500;
+    /* Define a cor de fundo laranja */
+    color: white;
+    /* Define a cor do texto como branco */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 15px;
+    /* Adiciona espaçamento vertical dentro do botão */
+    border-radius: 50px;
+    /* Bordas arredondadas no botão */
+    cursor: pointer;
+    /* Aplica o cursor de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease;
+    /* Aplica transição suave ao mudar a cor de fundo */
+    font-size: 1.7vw;
+    /* Define o tamanho da fonte relativo à largura da tela (viewport) */
+    width: 100%;
+    /* Largura fixa dos botões */
+    display: flex;
+    /* Ativa o flexbox dentro do botão */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente */
+    align-items: center;
+    /* Centraliza o texto verticalmente */
+    justify-content: space-evenly
+        /* Distribui o conteúdo uniformemente no botão */
 }
 
-.modal-btnEventos:hover, .modal-btnEsportes:hover, .modal-btnClubes:hover {
+.modal-btnEventos:hover,
+.modal-btnEsportes:hover,
+.modal-btnClubes:hover {
     background-color: #4CAF50;
 }
 
 .clubs-title {
-    margin: 0; /* Remove margens ao redor do título */
-    color: #038610; /* Define a cor verde para o título */
+    margin: 0;
+    /* Remove margens ao redor do título */
+    color: #038610;
+    /* Define a cor verde para o título */
 }
 
 /* Tamanho do título h2 */
@@ -256,81 +324,123 @@ h2 {
 
 /* Esconde o título ao passar o mouse */
 .clubs:hover .clubs-title {
-    opacity: 0; /* Faz o título desaparecer ao passar o mouse */
+    opacity: 0;
+    /* Faz o título desaparecer ao passar o mouse */
 }
 
 /* Container dos botões, inicialmente escondido */
 .clubs-buttons {
-    display: none; /* Esconde os botões por padrão */
-    margin-top: 10px; /* Espaçamento acima dos botões */
-    gap: 20px; /* Define um espaçamento entre os botões */
-    flex-direction: column; /* Alinha os botões verticalmente */
-    align-items: center; /* Centraliza os botões horizontalmente */
-    justify-content: space-between; /* Distribui os botões uniformemente */
+    display: none;
+    /* Esconde os botões por padrão */
+    margin-top: 10px;
+    /* Espaçamento acima dos botões */
+    gap: 20px;
+    /* Define um espaçamento entre os botões */
+    flex-direction: column;
+    /* Alinha os botões verticalmente */
+    align-items: center;
+    /* Centraliza os botões horizontalmente */
+    justify-content: space-between;
+    /* Distribui os botões uniformemente */
     width: 100%;
-    height: 100%; /* Define a altura total do container */
+    height: 100%;
+    /* Define a altura total do container */
 }
 
 /* Mostra os botões quando a seção é hover */
 .clubs:hover .clubs-buttons {
-    display: flex; /* Exibe os botões ao passar o mouse */
+    display: flex;
+    /* Exibe os botões ao passar o mouse */
 }
 
 .clubs {
-    background-image: url('imagens/clubes acadêmicos.png'); /* Imagem de fundo específica para o container de clubes */
-    background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
-    background-position: center; /* Centraliza a imagem de fundo */
-    width: 300px; /* Define a largura do container */
-    height: 200px; /* Define a altura do container */
-    display: flex; /* Usa flexbox para organizar os elementos dentro */
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    overflow: hidden; /* Oculta qualquer conteúdo que exceda o container */
+    background-image: url('imagens/clubes acadêmicos.png');
+    /* Imagem de fundo específica para o container de clubes */
+    background-size: cover;
+    /* Faz a imagem de fundo cobrir toda a área */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    width: 300px;
+    /* Define a largura do container */
+    height: 200px;
+    /* Define a altura do container */
+    display: flex;
+    /* Usa flexbox para organizar os elementos dentro */
+    flex-direction: column;
+    /* Alinha os elementos verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens verticalmente */
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que exceda o container */
 }
 
 /* Estilo dos botões dentro da seção de clubes */
 .club-button {
-    background-color: #FFA500; /* Cor de fundo laranja */
-    color: white; /* Cor do texto branco */
-    border: none; /* Remove a borda padrão */
-    padding: 15px 0; /* Espaçamento vertical dentro do botão */
-    border-radius: 50px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de "mãozinha" ao passar o mouse */
-    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor */
-    font-size: 1.7vw; /* Tamanho da fonte relativo à largura da tela */
-    width: 250px; /* Largura fixa dos botões */
-    height: 40px; /* Altura para ajustar o tamanho */
-    display: flex; /* Ativa o flexbox dentro do botão */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    justify-content: space-evenly; /* Distribui o conteúdo uniformemente no botão */
+    background-color: #FFA500;
+    /* Cor de fundo laranja */
+    color: white;
+    /* Cor do texto branco */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 15px 0;
+    /* Espaçamento vertical dentro do botão */
+    border-radius: 50px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease;
+    /* Transição suave ao mudar a cor */
+    font-size: 1.7vw;
+    /* Tamanho da fonte relativo à largura da tela */
+    width: 250px;
+    /* Largura fixa dos botões */
+    height: 40px;
+    /* Altura para ajustar o tamanho */
+    display: flex;
+    /* Ativa o flexbox dentro do botão */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente */
+    align-items: center;
+    /* Centraliza o texto verticalmente */
+    justify-content: space-evenly;
+    /* Distribui o conteúdo uniformemente no botão */
 }
 
 /* Muda a cor do botão ao passar o mouse */
 .club-button:hover {
-    background-color: #4CAF50; /* Muda a cor de fundo para verde ao passar o mouse */
+    background-color: #4CAF50;
+    /* Muda a cor de fundo para verde ao passar o mouse */
 }
 
 /* Animação ao passar o mouse na seção de clubes */
 .animação:hover {
-    animation: animCard 400ms; /* Aplica a animação definida */
-    height: 225px; /* Altura aumentada */
-    width: 450px; /* Largura aumentada */
+    animation: animCard 400ms;
+    /* Aplica a animação definida */
+    height: 225px;
+    /* Altura aumentada */
+    width: 450px;
+    /* Largura aumentada */
 }
 
 .animação h2 {
-    transition: opacity; /* Transição suave na opacidade */
+    transition: opacity;
+    /* Transição suave na opacidade */
 }
 
 .animação:hover h2 {
-    display: none; /* Esconde o título ao passar o mouse */
+    display: none;
+    /* Esconde o título ao passar o mouse */
 }
 
 .animação:not(:hover) {
-    animation: notAnimCard 400ms; /* Aplica a animação quando não estiver em hover */
-    height: 150px; /* Altura padrão */
-    width: 350px; /* Largura padrão */
+    animation: notAnimCard 400ms;
+    /* Aplica a animação quando não estiver em hover */
+    height: 150px;
+    /* Altura padrão */
+    width: 350px;
+    /* Largura padrão */
 }
 
 @keyframes animCard {
@@ -363,7 +473,13 @@ h2 {
 }
 
 
-.modalEvento, .modalEsporte, .modalClubes, .modalPerfilEsporte, .modalPerfilEventos, .modalPerfilClubes, .modalPerfilCertificado {
+.modalEvento,
+.modalEsporte,
+.modalClubes,
+.modalPerfilEsporte,
+.modalPerfilEventos,
+.modalPerfilClubes,
+.modalPerfilCertificado {
     display: none;
     position: fixed;
     left: 0;
@@ -374,8 +490,14 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-contentEvento, .modal-contentEsporte, .modal-contentClubes, .modal-contentPerfilEsporte, .modal-contentPerfilEventos, .modal-contentPerfilClubes, .modal-contentPerfilCertificado{
-    background: rgb(76,175,80);
+.modal-contentEvento,
+.modal-contentEsporte,
+.modal-contentClubes,
+.modal-contentPerfilEsporte,
+.modal-contentPerfilEventos,
+.modal-contentPerfilClubes,
+.modal-contentPerfilCertificado {
+    background: rgb(76, 175, 80);
     color: white;
     font-size: 20px;
     margin: 5% auto;
@@ -385,19 +507,27 @@ h2 {
     border-radius: 10px;
 }
 
-.close-btnEvento, .close-btnEsporte, .close-btnClubes , .close-btnPerfilEsporte, .close-btnPerfilEventos , .close-btnPerfilClubes, .close-btnPerfilCertificado{
+.close-btnEvento,
+.close-btnEsporte,
+.close-btnClubes,
+.close-btnPerfilEsporte,
+.close-btnPerfilEventos,
+.close-btnPerfilClubes,
+.close-btnPerfilCertificado {
     float: right;
     cursor: pointer;
     font-size: 20px;
 }
 
-.containerBtn{
+.containerBtn {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.btnInscricaoEsporte, .btnInscricaoClubes, .btnIncricaoEventos{
+.btnInscricaoEsporte,
+.btnInscricaoClubes,
+.btnIncricaoEventos {
     border-radius: 10px;
     padding: 10px;
     font-size: 15px;
@@ -405,16 +535,23 @@ h2 {
     border: none;
 }
 
-.btnInscricaoEsporte:hover, .btnInscricaoClubes:hover, .btnIncricaoEventos:hover{
+.btnInscricaoEsporte:hover,
+.btnInscricaoClubes:hover,
+.btnIncricaoEventos:hover {
     background-color: #FFA500;
     color: white;
 }
 
-#modal-imageEsporte, #modal-imageEventos, #modal-imageClubes{
+#modal-imageEsporte,
+#modal-imageEventos,
+#modal-imageClubes {
     border-radius: 10px;
 }
 
-#esportes-list li, #Eventos-list li, #Clubes-list li, #certificado-list li{
+#esportes-list li,
+#Eventos-list li,
+#Clubes-list li,
+#certificado-list li {
     margin-top: 10px;
     width: 90%;
     padding: 15px;
@@ -429,7 +566,9 @@ h2 {
     font-family: Arial, sans-serif;
 }
 
-#esportes-list button, #Eventos-list button, #Clubes-list button{
+#esportes-list button,
+#Eventos-list button,
+#Clubes-list button {
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -440,6 +579,8 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-#esportes-list button:hover, #Eventos-list button:hover, #Clubes-list button:hover {
+#esportes-list button:hover,
+#Eventos-list button:hover,
+#Clubes-list button:hover {
     background-color: #c0392b;
 }

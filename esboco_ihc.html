@@ -10,151 +10,161 @@
 </head>
 
 <body>
-<div class="background">
-    <div class="MeuPerfil">
-        <div class="btnPerfil">
-            <p>Meu Perfil</p>
-            <img src="imagens/icons8-down-arrow-50.png" alt="Seta baixo">
+    <div class="background">
+        <div class="MeuPerfil">
+            <div class="btnPerfil">
+                <p>Meu Perfil</p>
+                <img src="imagens/icons8-down-arrow-50.png" alt="Seta baixo">
+            </div>
+            <div class="atividades">
+                <button class="minhasAtividades btnPerfil">Minhas Atividades</button>
+                <button class="meusEventos btnPerfil">Meus Eventos</button>
+                <button class="meusClubes btnPerfil">Clubes Acadêmicos</button>
+                <button class="meusCertificados btnPerfil">Meus Certificados</button>
+            </div>
         </div>
-        <div class="atividades">
-            <button class="minhasAtividades btnPerfil">Minhas Atividades</button>
-            <button class="meusEventos btnPerfil">Meus Eventos</button>
-            <button class="meusClubes btnPerfil">Clubes Acadêmicos</button>
-            <button class="meusCertificados btnPerfil">Meus Certificados</button>
-        </div>
-    </div>
-            
-    <div class="section sports animação">
-        <h2 class="sports-title"></h2>
-        <div class="sports-buttons">
-            <button class="modal-btnEsportes" data-nome="Futsal" data-date="15/10 17:00" data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
-                Futsal
-            </button>
-            <button class="modal-btnEsportes" data-nome="Vôlei" data-date="16/10 17:00"
-                data-address="Rua Padre Ibiapina, 1129, Centro" data-image="imagens/volei.jpeg">
-                Vôlei
-            </button>
-            <button class="modal-btnEsportes" data-nome="Basquete" data-date="16/10 19:00"
-                data-address="Rua Padre Ibiapina, 1280, Centro" data-image="imagens/basquete.jpg">
-                Basquete
-            </button>
-        </div>
-    </div>
-    <div class="section events animação">
-        <h2></h2>
-        <nav class="containerLinks">
-            <button class="modal-btnEventos" data-nome="Feira de Iniciação Científica" data-date="30/10 08:00" data-address="Rua das Universidades, 123, Centro Acadêmico" data-image="imagens/iniciacao_cientifica.png">
-                Feira de Iniciação Científica
-            </button>
-            <button class="modal-btnEventos" data-nome="Semana de Tecnologia e Inovação" data-date="23/11 19:00" data-address="Av. da Inovação, 789, Parque Tecnológico" data-image="imagens/Semana de Tecnologia e Inovação.png">
-                Semana de Tecnologia e Inovação
-            </button>
-            <button class="modal-btnEventos" data-nome="Hackathon Social" data-date="01/12 08:00"
-                data-address="Rua da Música, 321, Auditório Central" data-image="imagens/hackathon.png">
-                Hackathon Social
-            </button>
-            <button class="modal-btnEventos" data-nome="Empreendedorismo na saúde" data-date="MAR > 05 MAR - 15:00"
-                data-address="Av. das Artes, 987, Galeria Cultural" data-image="imagens/workshop.jpeg">Workshop
-                Empreendedorismo na saúde
-            </button>
-            <button class="modal-btnEventos" data-nome="Seminário de Inovação Tecnológica" data-date="10 OUT - 14:00" data-address="Auditório Principal, Campus Central" data-image="imagens/seminario.webp">
-                Seminário de Inovação Tecnológica
-            </button>
-        </nav>
-        <div class="icon events-icon"></div>
-    </div>
-    <div class="section clubs animação">
-        <h2 class="clubs-title"></h2>
-        <div class="clubs-buttons">
-            <button class="modal-btnClubes" data-nome="Clube de Astronomia" data-date="Todas as terças às 14:00" data-address="Sala 209" data-image="imagens/astronomia.jpg">Clube de Astronomia</button>
-            <button class="modal-btnClubes" data-nome="Clube de Tecnologia" data-date="Todas as quartas ás 16:00" data-address="Sala 321" data-image="imagens/tecnologia.jpg">Clube de Tecnologia</button>
-            <button class="modal-btnClubes" data-nome="Clube de Artes" data-date="Todas as quintas às 15:00" data-address="Sala 109" data-image="imagens/artes.jpg">Clube de Artes</button>
-            <button class="modal-btnClubes" data-nome="Clube de Leitura" data-date="Todas as quintas às 14:30" data-address="Sala 301" data-image="imagens/Clubes_academicos.jpg">Clube de Leitura</button>
-        </div>
-    </div>
 
-    <div id="modalEvento" class="modalEvento">
-        <div class="modal-contentEvento">
-            <span class="close-btnEvento">&times;</span>
-            <img id="modal-imageEventos" src="" alt="Event Image" style="width: 100%; height: 200px;">
-            <h2>Eventos e Palestras</h2>
-            <p id="modal-nomeEventos">Nome: </p>
-            <p id="modal-dateEventos">Data e Hora</p>
-            <p id="modal-addressEventos">Endereço</p>
-            <div class="containerBtn"><button class="btnIncricaoEventos">Realizar Inscrição</button></div>
+        <div class="section sports animação">
+            <h2 class="sports-title"></h2>
+            <div class="sports-buttons">
+                <button class="modal-btnEsportes" data-nome="Futsal" data-date="15/10 - 17:00"
+                    data-address="Rua Padre Ibiapina, 1150, Centro" data-image="imagens/2148849141.jpg">
+                    Futsal
+                </button>
+                <button class="modal-btnEsportes" data-nome="Vôlei" data-date="16/10 - 17:00"
+                    data-address="Rua Padre Ibiapina, 1129, Centro" data-image="imagens/volei.jpeg">
+                    Vôlei
+                </button>
+                <button class="modal-btnEsportes" data-nome="Basquete" data-date="16/10 - 19:00"
+                    data-address="Rua Padre Ibiapina, 1280, Centro" data-image="imagens/basquete.jpg">
+                    Basquete
+                </button>
+            </div>
         </div>
-    </div>
-
-    <div id="modalEsporte" class="modalEsporte">
-        <div class="modal-contentEsporte">
-            <span class="close-btnEsporte">&times;</span>
-            <img id="modal-imageEsporte" src="" alt="Event Image" style="width: 100%; height: 200px;">
-            <h2>Esportes</h2>
-            <p id="modal-tipoEsporte"></p>
-            <p id="modal-nomeEsporte"></p>
-            <p id="modal-dateEsporte"></p>
-            <p id="modal-addressEsporte"></p>
-            <div class="containerBtn"><button class="btnInscricaoEsporte">Realizar Inscrição</button></div>
+        <div class="section events animação">
+            <h2></h2>
+            <nav class="containerLinks">
+                <button class="modal-btnEventos" data-nome="Feira de Iniciação Científica" data-date="30/10 - 08:00"
+                    data-address="Rua das Universidades, 123, Centro Acadêmico"
+                    data-image="imagens/iniciacao_cientifica.png">
+                    Feira de Iniciação Científica
+                </button>
+                <button class="modal-btnEventos" data-nome="Semana de Tecnologia e Inovação" data-date="23/11 - 19:00"
+                    data-address="Av. da Inovação, 789, Parque Tecnológico"
+                    data-image="imagens/Semana de Tecnologia e Inovação.png">
+                    Semana de Tecnologia e Inovação
+                </button>
+                <button class="modal-btnEventos" data-nome="Hackathon Social" data-date="01/12 - 08:00"
+                    data-address="Rua da Música, 321, Auditório Central" data-image="imagens/hackathon.png">
+                    Hackathon Social
+                </button>
+                <button class="modal-btnEventos" data-nome="Empreendedorismo na saúde" data-date="05/03 - 15:00"
+                    data-address="Av. das Artes, 987, Galeria Cultural" data-image="imagens/workshop.jpeg">Workshop
+                    Empreendedorismo na saúde
+                </button>
+                <button class="modal-btnEventos" data-nome="Seminário de Inovação Tecnológica" data-date="10/10 - 14:00"
+                    data-address="Auditório Principal, Campus Central" data-image="imagens/seminario.webp">
+                    Seminário de Inovação Tecnológica
+                </button>
+            </nav>
+            <div class="icon events-icon"></div>
         </div>
-    </div>
-
-    <div id="modalClubes" class="modalClubes">
-        <div class="modal-contentClubes">
-            <span class="close-btnClubes">&times;</span>
-            <img id="modal-imageClubes" src="" alt="Clubes Image" style="width: 100%; height: 200px;">
-            <h2>Clubes</h2>
-            <p id="modal-nomeClubes"></p>
-            <p id="modal-dateClubes"></p>
-            <p id="modal-addressClubes"></p>
-            <div class="containerBtn"><button class="btnInscricaoClubes">Realizar Inscrição</button></div>
+        <div class="section clubs animação">
+            <h2 class="clubs-title"></h2>
+            <div class="clubs-buttons">
+                <button class="modal-btnClubes" data-nome="Clube de Astronomia" data-date="Todas as terças às 14:00"
+                    data-address="Sala 209" data-image="imagens/astronomia.jpg">Clube de Astronomia</button>
+                <button class="modal-btnClubes" data-nome="Clube de Tecnologia" data-date="Todas as quartas ás 16:00"
+                    data-address="Sala 321" data-image="imagens/tecnologia.jpg">Clube de Tecnologia</button>
+                <button class="modal-btnClubes" data-nome="Clube de Artes" data-date="Todas as quintas às 15:00"
+                    data-address="Sala 109" data-image="imagens/artes.jpg">Clube de Artes</button>
+                <button class="modal-btnClubes" data-nome="Clube de Leitura" data-date="Todas as quintas às 14:30"
+                    data-address="Sala 301" data-image="imagens/Clubes_academicos.jpg">Clube de Leitura</button>
+            </div>
         </div>
-    </div>
 
-    <div id="modalPerfilEsporte" class="modalPerfilEsporte">
-        <div class="modal-contentPerfilEsporte">
-          <span class="close-btnPerfilEsporte">&times;</span>
-          <h2>Meus Esportes</h2>
-          <ul id="esportes-list">
-          </ul>
+        <div id="modalEvento" class="modalEvento">
+            <div class="modal-contentEvento">
+                <span class="close-btnEvento">&times;</span>
+                <img id="modal-imageEventos" src="" alt="Event Image" style="width: 100%; height: 200px;">
+                <h2>Eventos e Palestras</h2>
+                <p id="modal-nomeEventos">Nome: </p>
+                <p id="modal-dateEventos">Data e Hora</p>
+                <p id="modal-addressEventos">Endereço</p>
+                <div class="containerBtn"><button class="btnIncricaoEventos">Realizar Inscrição</button></div>
+            </div>
         </div>
-    </div>
 
-    <div id="modalPerfilEventos" class="modalPerfilEventos">
-        <div class="modal-contentPerfilEventos">
-          <span class="close-btnPerfilEventos">&times;</span>
-          <h2>Meus Eventos</h2>
-          <ul id="Eventos-list">
-          </ul>
+        <div id="modalEsporte" class="modalEsporte">
+            <div class="modal-contentEsporte">
+                <span class="close-btnEsporte">&times;</span>
+                <img id="modal-imageEsporte" src="" alt="Event Image" style="width: 100%; height: 200px;">
+                <h2>Esportes</h2>
+                <p id="modal-tipoEsporte"></p>
+                <p id="modal-nomeEsporte"></p>
+                <p id="modal-dateEsporte"></p>
+                <p id="modal-addressEsporte"></p>
+                <div class="containerBtn"><button class="btnInscricaoEsporte">Realizar Inscrição</button></div>
+            </div>
         </div>
-    </div>
 
-    <div id="modalPerfilClubes" class="modalPerfilClubes">
-        <div class="modal-contentPerfilClubes">
-          <span class="close-btnPerfilClubes">&times;</span>
-          <h2>Meus Clubes Academicos</h2>
-          <ul id="Clubes-list">
-          </ul>
+        <div id="modalClubes" class="modalClubes">
+            <div class="modal-contentClubes">
+                <span class="close-btnClubes">&times;</span>
+                <img id="modal-imageClubes" src="" alt="Clubes Image" style="width: 100%; height: 200px;">
+                <h2>Clubes</h2>
+                <p id="modal-nomeClubes"></p>
+                <p id="modal-dateClubes"></p>
+                <p id="modal-addressClubes"></p>
+                <div class="containerBtn"><button class="btnInscricaoClubes">Realizar Inscrição</button></div>
+            </div>
         </div>
-    </div>
 
-    <div id="modalPerfilCertificado" class="modalPerfilCertificado">
-        <div class="modal-contentPerfilCertificado">
-          <span class="close-btnPerfilCertificado">&times;</span>
-          <h2>Meus Certificados</h2>
-          <ul id="certificado-list">
-            <li>Certificado de Conclusão1</li>
-            <li>Certificado de Conclusão2</li>
-            <li>Certificado de Conclusão3</li>
-          </ul>
+        <div id="modalPerfilEsporte" class="modalPerfilEsporte">
+            <div class="modal-contentPerfilEsporte">
+                <span class="close-btnPerfilEsporte">&times;</span>
+                <h2>Meus Esportes</h2>
+                <ul id="esportes-list">
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <script src="scriptEventos.js"></script>
-    <script src="scriptAtividades.js"></script>
-    <script src="scriptMeuPerfil.js"></script>
-    <script src="scriptClubesAcademicos.js"></script>
-    <script src="scriptCertificado.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <div id="modalPerfilEventos" class="modalPerfilEventos">
+            <div class="modal-contentPerfilEventos">
+                <span class="close-btnPerfilEventos">&times;</span>
+                <h2>Meus Eventos</h2>
+                <ul id="Eventos-list">
+                </ul>
+            </div>
+        </div>
+
+        <div id="modalPerfilClubes" class="modalPerfilClubes">
+            <div class="modal-contentPerfilClubes">
+                <span class="close-btnPerfilClubes">&times;</span>
+                <h2>Meus Clubes Academicos</h2>
+                <ul id="Clubes-list">
+                </ul>
+            </div>
+        </div>
+
+        <div id="modalPerfilCertificado" class="modalPerfilCertificado">
+            <div class="modal-contentPerfilCertificado">
+                <span class="close-btnPerfilCertificado">&times;</span>
+                <h2>Meus Certificados</h2>
+                <ul id="certificado-list">
+                    <li>Certificado de Conclusão1</li>
+                    <li>Certificado de Conclusão2</li>
+                    <li>Certificado de Conclusão3</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="scriptEventos.js"></script>
+        <script src="scriptAtividades.js"></script>
+        <script src="scriptMeuPerfil.js"></script>
+        <script src="scriptClubesAcademicos.js"></script>
+        <script src="scriptCertificado.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
